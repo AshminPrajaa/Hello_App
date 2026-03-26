@@ -1,0 +1,24 @@
+package org.example;
+
+public class UC5HelloApp {
+        public static void main(String[] args) {
+            String name;
+            if (args.length > 0) {
+
+                StringBuilder nameBuilder = new StringBuilder();
+                boolean first = true;
+                for (String n : args) {
+                    if (!first) {
+                        nameBuilder.append(", ");
+                    }
+                    nameBuilder.append(n);
+                    first = false;
+                }
+                name = nameBuilder.toString();
+            } else {
+                name = "ASH";
+            }
+            System.out.println("Hello, " + name + "!");
+        }
+    }
+
